@@ -5,20 +5,9 @@ import Image from "next/image";
 import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
 
-export const montserrat = localFont({
-  src: [
-    {
-      path: "../../../public/fonts/Montserrat-Bold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../../../public/fonts/Montserrat-ExtraBold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
+import {montserrat} from '../fonts'
+
+
 
 const Header = () => {
   const menuArray = [
@@ -68,11 +57,12 @@ const Header = () => {
                   src={item.src}
                   alt={item.alt}
                   width={24}
-                  className="mx-[0.62vw] my-[1.11vh]"
+                  className="mx-[0.62vw] my-[1.11vh] md:h-[2.22vh] md:w-[1.25vw]"
                 />
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </header>

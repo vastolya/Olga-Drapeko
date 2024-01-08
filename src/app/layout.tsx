@@ -18,20 +18,7 @@ const evolventa = localFont({
     },
   ],
 });
-const montserrat = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Montserrat-Bold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Montserrat-ExtraBold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
+
 
 export const metadata: Metadata = {
   title: "Юрист Ольга Драпеко",

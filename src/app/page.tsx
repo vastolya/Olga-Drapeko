@@ -1,5 +1,10 @@
 import Image from "next/image";
+import Main from "./components/Main";
 
 export default function Home() {
-  return <main className="">123</main>;
+  return (
+    <main className="">
+      <Main />
+    </main>
+  );
 }
