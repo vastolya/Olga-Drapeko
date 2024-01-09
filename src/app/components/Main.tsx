@@ -2,11 +2,12 @@
 import { useState } from "react";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import PicMain from "../../../public/pics/picMain.jpg";
 
 import { montserrat } from "../fonts";
-import { evolventa } from "../fonts";
+
 import Button from "./Button";
 
 const mainArray = [
@@ -14,15 +15,21 @@ const mainArray = [
     title: "Юридические лица",
     description:
       "Сопровождение сделок, помощь в урегулировании правовых конфликтов и разрешении других юридических задач",
+    services: [
+      { title: "Юридическое сопровождение бизнеса (аутсорсинг)", link: "/#" },
+      { title: "Разрешение споров и медиация", link: "/#" },
+    ],
   },
   {
     title: "Физические лица",
     description:
       "Консультации по правовым вопросам, сопровождение сделок, представление ваших интересов в суде",
+    services: [{ title: "Разрешение споров и медиация", link: "/#" }],
   },
   {
     title: "Банкротство",
     description: "Представление интересов по делам о банкротстве",
+    services: [{ title: "Юридическое сопровождение банкротства", link: "/#" }],
   },
 ];
 
@@ -35,7 +42,7 @@ const Main = () => {
 
   return (
     <main className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD]">
-      <div className="md:mx-[12.5vw] grid grid-cols-6 text-[#1B1743] select-none">
+      <div className="md:mx-[12.5vw] grid grid-cols-6 md:gap-x-[1.25vw] text-[#1B1743] select-none md:pb-[11.11vh]">
         <div className="col-span-2">
           <div className="relative">
             <div className="z-[22] absolute">
@@ -55,7 +62,7 @@ const Main = () => {
               <div
                 key={index}
                 onClick={() => handleItemClick(index)}
-                className={`border-[0.09vh] px-[0.83vw] py-[1.11vh] ${
+                className={`border-[0.11vh] px-[0.83vw] py-[1.11vh] first:rounded-l-md last:rounded-r-md ${
                   selectedItem === index
                     ? "border-[#962C52]"
                     : "border-[#D3D3E3]"
@@ -64,7 +71,7 @@ const Main = () => {
                 <p
                   className={` ${
                     selectedItem === index ? "text-[#962C52]" : "text-[#D3D3E3]"
-                  } md:text-[1.48vh] md:leading-[2.22vh] ${
+                  } md:text-[1.48vh] md:leading-[2.22vh] font-semibold ${
                     montserrat.className
                   }`}
                 >
@@ -81,7 +88,27 @@ const Main = () => {
             <Button title="Записаться на консультацию" />
           </div>
         </div>
-        <div>123</div>
+        <div className="col-span-2 md:mt-[7.40vh]">
+          <h1 className="md:text-[3.33vh] md:leading-[3.51vh] md:pb-[1.85vh] font-bold">
+            {mainArray[selectedItem].title}
+          </h1>
+          <p
+            className={`md:text-[1.48vh] md:leading-[2.22vh] font-medium ${montserrat.className}`}
+          >
+            {mainArray[selectedItem].description}
+          </p>
+        </div>
+        <div className="col-span-4 md:mt-[7.40vh] grid md:gap-y-[0.74vh]">
+          {mainArray[selectedItem].services.map((item, index) => (
+            <Link
+              key={index}
+              href={item.link}
+              className={`h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
       </div>
     </main>
   );
