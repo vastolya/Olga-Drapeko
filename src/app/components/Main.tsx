@@ -42,7 +42,7 @@ const Main = () => {
 
   return (
     <main className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD]">
-      <div className="md:mx-[12.5vw] grid grid-cols-6 md:gap-x-[1.25vw] text-[#1B1743] select-none md:pb-[11.11vh]">
+      <div className="md:mx-[12.5vw] grid grid-cols-6 md:gap-x-[1.25vw] text-[#1B1743] md:pb-[11.11vh]">
         <div className="col-span-2">
           <div className="relative">
             <div className="z-[22] absolute">

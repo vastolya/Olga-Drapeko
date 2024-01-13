@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={evolventa.className}>
+      <body className={`select-none ${evolventa.className}`}>
         <Toaster position="bottom-right" />
         <Header />
         {children}
