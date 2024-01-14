@@ -8,6 +8,7 @@ import FeedbackForm from "./components/FeedbackForm";
 export default function Home() {
   return (
     <main className="">
+      <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] h-[12.8vh]"></div>
       <Main />
       <About />
       <Advantages />

@@ -1,13 +1,15 @@
-import React from "react";
+'use client'
+import React, { RefObject, createRef, useRef } from "react";
 import Image from "next/image";
-
 import PicAbout from "../../../public/pics/picAbout.jpg";
 
 import { montserrat } from "../fonts";
 
+export const aboutMeRef: RefObject<HTMLDivElement> = createRef();
+
 const About = () => {
   return (
-    <section className="relative">
+    <section id="aboutMe" ref={aboutMeRef} className="relative">
       <div className="md:px-[12.5vw] md:pt-[11.11vh] md:pb-[12.96vh] grid grid-cols-6 md:gap-x-[1.25vw] text-[#1B1743]">
         <div className="col-span-2 relative">
           <div className="bg-[#D8CACF] h-[66.38vh] w-full absolute top-0 left-[-1.04vw] rounded-tr-[550px] rounded-md"></div>

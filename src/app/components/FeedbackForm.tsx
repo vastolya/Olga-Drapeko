@@ -1,19 +1,20 @@
 'use client'
 
-import React from "react";
+import React, { RefObject, createRef, useRef } from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-
 import { POST } from "../api/send/route";
 import { toast } from "react-hot-toast";
 
+import { montserrat } from "../fonts";
+import { evolventa } from "../fonts";
 import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
 import IconPin from "../../../public/icons/iconPin.svg";
 import PicFeedback from "../../../public/pics/picFeedback.jpg";
 
-import { montserrat } from "../fonts";
-import { evolventa } from "../fonts";
+
+export const feedbackRef: RefObject<HTMLDivElement> = createRef();
 
 const socialArray = [
   { src: IconTelegram, alt: "Telegram" },
@@ -53,7 +54,7 @@ const FeedbackForm = () => {
   }
 
   return (
-    <section>
+    <section id='feedback' ref={feedbackRef}>
       <div className="md:px-[12.5vw] md:py-[11.11vh] grid grid-cols-6 md:gap-x-[1.25vw]">
         <form
           id="username"

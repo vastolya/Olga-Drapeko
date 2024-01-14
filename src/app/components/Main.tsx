@@ -3,42 +3,70 @@ import { useState } from "react";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-import PicMain from "../../../public/pics/picMain.jpg";
-
-import { montserrat } from "../fonts";
-
+import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
 
-const mainArray = [
-  {
-    title: "Юридические лица",
-    description:
-      "Сопровождение сделок, помощь в урегулировании правовых конфликтов и разрешении других юридических задач",
-    services: [
-      { title: "Юридическое сопровождение бизнеса (аутсорсинг)", link: "/#" },
-      { title: "Разрешение споров и медиация", link: "/#" },
-    ],
-  },
-  {
-    title: "Физические лица",
-    description:
-      "Консультации по правовым вопросам, сопровождение сделок, представление ваших интересов в суде",
-    services: [{ title: "Разрешение споров и медиация", link: "/#" }],
-  },
-  {
-    title: "Банкротство",
-    description: "Представление интересов по делам о банкротстве",
-    services: [{ title: "Юридическое сопровождение банкротства", link: "/#" }],
-  },
-];
+import { montserrat } from "../fonts";
+import PicMain from "../../../public/pics/picMain.jpg";
+
 
 const Main = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [selectedItem, setSelectedItem] = useState(0);
-
   const handleItemClick = (index: any) => {
     setSelectedItem(index);
   };
+  const mainArray = [
+    {
+      title: "Юридические лица",
+      description:
+        "Сопровождение сделок, помощь в урегулировании правовых конфликтов и разрешении других юридических задач",
+      services: [
+        {
+          title: "Юридическое сопровождение бизнеса (аутсорсинг)",
+          onClick: (e: any) => {
+            e.preventDefault();
+            router.push("/outsourcing");
+          },
+        },
+        {
+          title: "Разрешение споров и медиация",
+          onClick: (e: any) => {
+            e.preventDefault();
+            router.push("/mediation");
+          },
+        },
+      ],
+    },
+    {
+      title: "Физические лица",
+      description:
+        "Консультации по правовым вопросам, сопровождение сделок, представление ваших интересов в суде",
+      services: [
+        {
+          title: "Разрешение споров и медиация",
+          onClick: (e: any) => {
+            e.preventDefault();
+            router.push("/support");
+          },
+        },
+      ],
+    },
+    {
+      title: "Банкротство",
+      description: "Представление интересов по делам о банкротстве",
+      services: [
+        {
+          title: "Юридическое сопровождение банкротства",
+          onClick: (e: any) => {
+            e.preventDefault();
+            router.push("/bankruptcy");
+          },
+        },
+      ],
+    },
+  ];
 
   return (
     <main className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD]">
@@ -102,7 +130,8 @@ const Main = () => {
           {mainArray[selectedItem].services.map((item, index) => (
             <Link
               key={index}
-              href={item.link}
+              href="#"
+              onClick={item.onClick}
               className={`h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
             >
               {item.title}

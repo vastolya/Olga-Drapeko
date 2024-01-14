@@ -36,7 +36,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="md:pb-[4.44vh]">
+          <div className="md:pb-[4.44vh] w-fit">
             <Button title="Обратный звонок" />
           </div>
           <div className="md:pb-[4.44vh] w-fit">
