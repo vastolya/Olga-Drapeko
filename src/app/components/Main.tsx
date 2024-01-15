@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Button from "./Button";
+import { feedbackRef } from "./FeedbackForm";
 
 import { montserrat } from "../fonts";
 import PicMain from "../../../public/pics/picMain.jpg";
@@ -16,6 +17,12 @@ const Main = () => {
   const [selectedItem, setSelectedItem] = useState(0);
   const handleItemClick = (index: any) => {
     setSelectedItem(index);
+  };
+  const scrollToRef = (ref: any) => {
+    if (ref && ref.current) {
+      const yOffset = ref.current.getBoundingClientRect().top;
+      window.scrollBy({ top: yOffset, behavior: "smooth" });
+    }
   };
   const mainArray = [
     {
@@ -112,8 +119,8 @@ const Main = () => {
             Юрист для бизнеса
             <br />и частных лиц
           </h1>
-          <div className="">
-            <Button title="Записаться на консультацию" />
+          <div className="" onClick={() => scrollToRef(feedbackRef)}>
+            <Button title="Записаться на консультацию"/>
           </div>
         </div>
         <div className="col-span-2 md:mt-[7.40vh]">

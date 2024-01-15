@@ -23,7 +23,7 @@ const socialArray = [
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="border-t-[0.09vh] border-[#F0F0F5">
       <div className="md:mx-[12.5vw] md:mt-[2.22vh] md:mb-[4.44vh] text-[#1B1743] grid grid-cols-6 md:gap-x-[1.25vw]">
         <div className="col-span-2">
           <div className="flex items-center md:pb-[2.59vh]">

@@ -1,10 +1,11 @@
-'use client'
+"use client";
 
 import React, { RefObject, createRef, useRef } from "react";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { POST } from "../api/send/route";
 import { toast } from "react-hot-toast";
+import { usePathname } from "next/navigation";
 
 import { montserrat } from "../fonts";
 import { evolventa } from "../fonts";
@@ -12,21 +13,22 @@ import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
 import IconPin from "../../../public/icons/iconPin.svg";
 import PicFeedback from "../../../public/pics/picFeedback.jpg";
-
+import PicFeedbackClean from "../../../public/pics/picFeedbackClean.png";
+import Link from "next/link";
 
 export const feedbackRef: RefObject<HTMLDivElement> = createRef();
 
 const socialArray = [
-  { src: IconTelegram, alt: "Telegram" },
-  { src: IconWhatsapp, alt: "Whatsapp" },
+  { src: IconTelegram, alt: "Telegram", link: 'https://t.me/olga_drapeko' },
+  { src: IconWhatsapp, alt: "Whatsapp", link: 'https://wa.me/79233413266' },
 ];
-
 type FormInput = {
   name: string;
   phone: string;
 };
 
 const FeedbackForm = () => {
+  const pathname = usePathname();
   const {
     register,
     handleSubmit,
@@ -47,14 +49,14 @@ const FeedbackForm = () => {
       }),
     }).then(() => {
       // Toast notification
-      toast.success("Спасибо! Мы свяжемся с вами в ближайшее время");
+      toast.success("Спасибо! Мы свяжемся с вами в ближайшее время.");
     });
 
     reset();
   }
 
   return (
-    <section id='feedback' ref={feedbackRef}>
+    <section id="feedback" ref={feedbackRef}>
       <div className="md:px-[12.5vw] md:py-[11.11vh] grid grid-cols-6 md:gap-x-[1.25vw]">
         <form
           id="username"
@@ -122,14 +124,14 @@ const FeedbackForm = () => {
           </p>
           <div className="flex md:gap-x-[0.41vw] items-center md:pb-[5.55vh]">
             {socialArray.map((item, index) => (
-              <div key={index} className="bg-[#F8F6F7] h-fit rounded-md">
+              <Link href={item.link} target="_blank" key={index} className="bg-[#F8F6F7] h-fit rounded-md">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={24}
                   className="mx-[0.62vw] my-[1.11vh] md:h-[2.22vh] md:w-[1.25vw] object-contain"
                 />
-              </div>
+              </Link>
             ))}
           </div>
           <div className="flex md:gap-x-[12px]">
@@ -149,17 +151,32 @@ const FeedbackForm = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-2 relative">
-          <div className="z-[22] absolute top-[-9.25vh]">
-            <Image
-              src={PicFeedback}
-              alt="feedback full portrait"
-              width={600}
-              className="md:w-[20.72vw] md:h-[63.05vh] object-cover rounded-md"
-            />
+        {pathname == "/" ? (
+          <div className="col-span-2 relative">
+            <div className="z-[22] absolute top-[-9.25vh]">
+              <Image
+                src={PicFeedback}
+                alt="feedback full portrait"
+                width={600}
+                className="md:w-[20.72vw] md:h-[63.05vh] object-cover rounded-md"
+              />
+            </div>
+            <div className="bg-[#D8CACF] absolute top-[-7.2vh] left-[1.04vw] md:w-[20.72vw] md:h-[63.05vh] rounded-md "></div>
           </div>
-          <div className="bg-[#D8CACF] absolute top-[-7.2vh] left-[1.04vw] md:w-[20.72vw] md:h-[63.05vh] rounded-md "></div>
-        </div>
+        ) : (
+          <div className="col-span-2 relative">
+            <div className="absolute z-[22] md:top-[-6.01vh] md:left-[3.6vw]">
+              <Image
+                src={PicFeedbackClean}
+                alt="feedback clean portrait"
+                height={1000}
+                className="md:w-[17.96vw] md:h-[46.85vh] object-contain "
+              />
+            </div>
+            <div className="bg-gradient-to-r from-[#EBECF1] to-[#EBECF1] md:h-[40.83vh] md:w-[24.16vw] rounded-md absolute z-[21]"></div>
+            <div className="bg-[#D8CACF] md:h-[40.83vh] md:w-[24.16vw] rounded-md absolute top-[1.85vh] left-[1.04vw] z-[20]"></div>
+          </div>
+        )}
       </div>
     </section>
   );

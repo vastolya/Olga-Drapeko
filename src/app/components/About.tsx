@@ -48,12 +48,12 @@ const About = () => {
               10 лет
             </p>
             <ul className="list-disc box-content md:ml-[1.04vw] marker:text-[#D8CACF]">
-              <li className="md:pb-[1.11vh]">
+              <li className="md:pb-[1.11vh] md:pl-[0.62vw]">
                 Представление интересов клиентов в арбитражных судах <br />и
                 судах общей юрисдикции
               </li>
-              <li className="md:pb-[1.11vh]">Сопровождение сделок</li>
-              <li>Консультирование по различным правовым вопросам</li>
+              <li className="md:pb-[1.11vh] md:pl-[0.62vw]">Сопровождение сделок</li>
+              <li className="md:pl-[0.62vw]">Консультирование по различным правовым вопросам</li>
             </ul>
           </div>
         </div>

@@ -81,7 +81,7 @@ const Advantages = () => {
               </p>
             </div>
           </div>
-          <Link href={`/#`}>
+          <Link href={`/outsourcing`}>
             <Button title="Подробнее об услуге" />
           </Link>
         </div>

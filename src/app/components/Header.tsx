@@ -53,8 +53,8 @@ const Header = () => {
   };
 
   const socialArray = [
-    { src: IconTelegram, alt: "Telegram" },
-    { src: IconWhatsapp, alt: "Whatsapp" },
+    { src: IconTelegram, alt: "Telegram", link: 'https://t.me/olga_drapeko' },
+    { src: IconWhatsapp, alt: "Whatsapp", link: 'https://wa.me/79233413266' },
   ];
 
   const menuArray = [
@@ -111,7 +111,7 @@ const Header = () => {
 
   return (
     <main
-      className={`bg-white z-[33] fixed w-full transition-transform transform ${
+      className={`bg-white z-[33] fixed w-full transition-transform transform border-b-[0.09vh] border-[#F0F0F5] ${
         (scrolling && !isClick) || isClick
           ? "translate-y-0"
           : "-translate-y-full"
@@ -161,14 +161,14 @@ const Header = () => {
             </div>
             <div className="flex md:gap-x-[0.41vw] items-center">
               {socialArray.map((item, index) => (
-                <div key={index} className="bg-[#F8F6F7] h-fit rounded-md">
+                <Link href={item.link} target="_blank" key={index} className="bg-[#F8F6F7] h-fit rounded-md">
                   <Image
                     src={item.src}
                     alt={item.alt}
                     width={24}
                     className="mx-[0.62vw] my-[1.11vh] md:h-[2.22vh] md:w-[1.25vw]"
                   />
-                </div>
+                </Link>
               ))}
             </div>
           </div>
