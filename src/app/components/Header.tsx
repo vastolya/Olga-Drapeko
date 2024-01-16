@@ -5,11 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
-import { aboutMeRef } from "./About";
 import { montserrat } from "../fonts";
 import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
 import { feedbackRef } from "./FeedbackForm";
+import { aboutMeRef } from "./About";
 
 const Header = () => {
   const router = useRouter();
@@ -53,8 +53,8 @@ const Header = () => {
   };
 
   const socialArray = [
-    { src: IconTelegram, alt: "Telegram", link: 'https://t.me/olga_drapeko' },
-    { src: IconWhatsapp, alt: "Whatsapp", link: 'https://wa.me/79233413266' },
+    { src: IconTelegram, alt: "Telegram", link: "https://t.me/olga_drapeko" },
+    { src: IconWhatsapp, alt: "Whatsapp", link: "https://wa.me/79233413266" },
   ];
 
   const menuArray = [
@@ -120,12 +120,12 @@ const Header = () => {
       <header className={`flex justify-between  md:mx-[12.5vw] text-[#1B1743]`}>
         <div className="flex items-center">
           {mainLogo.map((item, index) => (
-            <Link
-              href="#"
+            <div
               key={index}
               onClick={(e) => {
                 item.OnClick(e);
               }}
+              className=" cursor-pointer"
             >
               <p className="text-[#962C52] md:text-[1.11vh] md:leading-[1.38vh] ">
                 {item.job}
@@ -133,7 +133,7 @@ const Header = () => {
               <p className=" font-bold md:text-[2.03vh] md:leading-[2.59vh]">
                 {item.name}
               </p>
-            </Link>
+            </div>
           ))}
         </div>
         <div
@@ -141,17 +141,15 @@ const Header = () => {
         >
           <div className="flex md:gap-x-[2.08vw] items-center">
             {menuArray.map((item, index) => (
-              <Link
-                href="#"
+              <div
                 key={index}
                 onClick={(e) => {
                   item.OnClick(e);
                 }}
-             
-                className={`md:px-[0.62vw] md:py-[1.11vh]`}
+                className={`md:px-[0.62vw] md:py-[1.11vh] cursor-pointer`}
               >
                 {item.title}
-              </Link>
+              </div>
             ))}
           </div>
           <div className="flex md:gap-x-[2.5vw] md:py-[2.59vh]">
@@ -161,7 +159,12 @@ const Header = () => {
             </div>
             <div className="flex md:gap-x-[0.41vw] items-center">
               {socialArray.map((item, index) => (
-                <Link href={item.link} target="_blank" key={index} className="bg-[#F8F6F7] h-fit rounded-md">
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  key={index}
+                  className="bg-[#F8F6F7] h-fit rounded-md"
+                >
                   <Image
                     src={item.src}
                     alt={item.alt}

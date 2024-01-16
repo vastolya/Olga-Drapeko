@@ -10,7 +10,6 @@ import { feedbackRef } from "./FeedbackForm";
 import { montserrat } from "../fonts";
 import PicMain from "../../../public/pics/picMain.jpg";
 
-
 const Main = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -32,17 +31,11 @@ const Main = () => {
       services: [
         {
           title: "Юридическое сопровождение бизнеса (аутсорсинг)",
-          onClick: (e: any) => {
-            e.preventDefault();
-            router.push("/outsourcing");
-          },
+          link: "/outsourcing",
         },
         {
           title: "Разрешение споров и медиация",
-          onClick: (e: any) => {
-            e.preventDefault();
-            router.push("/mediation");
-          },
+          link: "/mediation",
         },
       ],
     },
@@ -53,10 +46,7 @@ const Main = () => {
       services: [
         {
           title: "Разрешение споров и медиация",
-          onClick: (e: any) => {
-            e.preventDefault();
-            router.push("/support");
-          },
+          link: "/support",
         },
       ],
     },
@@ -66,10 +56,7 @@ const Main = () => {
       services: [
         {
           title: "Юридическое сопровождение банкротства",
-          onClick: (e: any) => {
-            e.preventDefault();
-            router.push("/bankruptcy");
-          },
+          link: "/bankruptcy",
         },
       ],
     },
@@ -120,7 +107,7 @@ const Main = () => {
             <br />и частных лиц
           </h1>
           <div className="" onClick={() => scrollToRef(feedbackRef)}>
-            <Button title="Записаться на консультацию"/>
+            <Button title="Записаться на консультацию" />
           </div>
         </div>
         <div className="col-span-2 md:mt-[7.40vh]">
@@ -137,8 +124,7 @@ const Main = () => {
           {mainArray[selectedItem].services.map((item, index) => (
             <Link
               key={index}
-              href="#"
-              onClick={item.onClick}
+              href={item.link}
               className={`h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
             >
               {item.title}

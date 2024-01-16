@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
 import Button from "./Button";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import { feedbackRef } from "./FeedbackForm";
+import { aboutMeRef } from "./About";
 
 import { montserrat } from "../fonts";
 import { evolventa } from "../fonts";
@@ -10,18 +15,49 @@ import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
 import IconPin from "../../../public/icons/iconPin.svg";
 
-const services = [
-  { title: "Физические лица" },
-  { title: "Юридические лица" },
-  { title: "Банкротство" },
-];
-
-const socialArray = [
-  { src: IconTelegram, alt: "Telegram" },
-  { src: IconWhatsapp, alt: "Whatsapp" },
-];
+const scrollToRef = (ref: any) => {
+  if (ref && ref.current) {
+    const yOffset = ref.current.getBoundingClientRect().top;
+    window.scrollBy({ top: yOffset, behavior: "smooth" });
+  }
+};
 
 const Footer = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const menuArray = [
+    {
+      title: "Обо мне",
+      OnClick: (e: any) => {
+        e.preventDefault();
+        if (pathname == "/") {
+          scrollToRef(aboutMeRef);
+        } else {
+          router.push("/#aboutMe");
+        }
+      },
+    },
+    {
+      title: "Контакты",
+      OnClick: (e: any) => {
+        e.preventDefault();
+        if (pathname == "/") {
+          scrollToRef(feedbackRef);
+        } else {
+          router.push("/#feedback");
+        }
+      },
+    },
+  ];
+  const services = [
+    { title: "Физические лица", link: "/support" },
+    { title: "Юридические лица", link: "/corporation" },
+    { title: "Банкротство", link: "/bankruptcy" },
+  ];
+  const socialArray = [
+    { src: IconTelegram, alt: "Telegram", link: "https://t.me/olga_drapeko" },
+    { src: IconWhatsapp, alt: "Whatsapp", link: "https://wa.me/79233413266" },
+  ];
   return (
     <footer className="border-t-[0.09vh] border-[#F0F0F5">
       <div className="md:mx-[12.5vw] md:mt-[2.22vh] md:mb-[4.44vh] text-[#1B1743] grid grid-cols-6 md:gap-x-[1.25vw]">
@@ -61,23 +97,29 @@ const Footer = () => {
           </p>
           <div className="grid md:gap-y-[0.74vh]">
             {services.map((item, index) => (
-              <div
+              <Link
                 key={index}
-                className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold"
+                href={item.link}
+                className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold w-fit"
               >
                 {item.title}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
         <div className={`md:mt-[4.07vh] ${montserrat.className}`}>
           <div className="grid md:gap-y-[0.74vh]">
-            <div className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold">
-              Обо мне
-            </div>
-            <div className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold">
-              Контакты
-            </div>
+            {menuArray.map((item, index) => (
+              <div
+                key={index}
+                onClick={(e) => {
+                  item.OnClick(e);
+                }}
+                className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold w-fit cursor-pointer"
+              >
+                {item.title}
+              </div>
+            ))}
           </div>
         </div>
         <div className={`col-span-2 ${montserrat.className}`}>
@@ -91,14 +133,18 @@ const Footer = () => {
           </p>
           <div className="flex md:gap-x-[0.41vw] items-center md:pb-[5.55vh]">
             {socialArray.map((item, index) => (
-              <div key={index} className="bg-[#F8F6F7] h-fit rounded-md">
+              <Link
+                href={item.link}
+                key={index}
+                className="bg-[#F8F6F7] h-fit rounded-md"
+              >
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={24}
                   className="mx-[0.62vw] my-[1.11vh] md:h-[2.22vh] md:w-[1.25vw] object-contain"
                 />
-              </div>
+              </Link>
             ))}
           </div>
           <div className="flex md:gap-x-[12px]">
@@ -119,7 +165,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={`bg-[#F0F0F5] md:py-[2.22vh] flex justify-center md:gap-[1.25vw] md:text-[1.29vh] md:leading-[1.85vh] font-normal text-[#807D9B] ${montserrat.className}`}>
+      <div
+        className={`bg-[#F0F0F5] md:py-[2.22vh] flex justify-center md:gap-[1.25vw] md:text-[1.29vh] md:leading-[1.85vh] font-normal text-[#807D9B] ${montserrat.className}`}
+      >
         <Link href="/">Сайт создали</Link>
         <p>/</p>
         <Link href="/">Автор фотоматериала</Link>
