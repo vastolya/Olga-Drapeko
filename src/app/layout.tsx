@@ -4,21 +4,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
+import { evolventa } from "./fonts";
 
-const evolventa = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Evolventa-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/Evolventa-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
 
 export const metadata: Metadata = {
   title: "Юрист Ольга Драпеко",
@@ -32,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={`select-none ${evolventa.className}`}>
+      <body className={`select-none ${evolventa.className} h-screen`}>
         <Toaster position="bottom-right" />
         <Header />
         {children}

@@ -1,16 +1,14 @@
 "use client";
 
 import React from "react";
-import Button from "./Button";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { feedbackRef } from "./FeedbackForm";
 import { aboutMeRef } from "./About";
 
 import { montserrat } from "../fonts";
 import { evolventa } from "../fonts";
-import Link from "next/link";
-
 import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
 import IconPin from "../../../public/icons/iconPin.svg";
@@ -59,7 +57,7 @@ const Footer = () => {
     { src: IconWhatsapp, alt: "Whatsapp", link: "https://wa.me/79233413266" },
   ];
   return (
-    <footer className="border-t-[0.09vh] border-[#F0F0F5">
+    <footer className="border-t-[0.09vh] border-[#F0F0F5] bg-white">
       <div className="md:mx-[12.5vw] md:mt-[2.22vh] md:mb-[4.44vh] text-[#1B1743] grid grid-cols-6 md:gap-x-[1.25vw]">
         <div className="col-span-2">
           <div className="flex items-center md:pb-[14.07vh]">
@@ -105,11 +103,11 @@ const Footer = () => {
           </div>
         </div>
         <div className={`col-span-2 col-start-5 ${montserrat.className}`}>
-          <p className="md:text-[1.48vh] md:leading-[2.22vh] md:pb-[1.85vh] font-semibold">
+          <p className="md:text-[1.48vh] md:leading-[2.22vh] md:pb-[1.85vh] font-semibold select-text">
             oa.drapeko@gmail.com
           </p>
           <p
-            className={`md:text-[3.33vh] md:leading-[3.51vh] md:pb-[1.85vh] font-bold ${evolventa.className}`}
+            className={`md:text-[3.33vh] md:leading-[3.51vh] md:pb-[1.85vh] font-bold ${evolventa.className} select-text`}
           >
             +7 923 341 32 66
           </p>
@@ -152,7 +150,7 @@ const Footer = () => {
       >
         <Link href="/">Сайт создали</Link>
         <p>/</p>
-        <Link href="/">Автор фотоматериала</Link>
+        <Link href="/photo_contributor">Автор фотоматериала</Link>
       </div>
     </footer>
   );

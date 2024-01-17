@@ -40,6 +40,25 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  useEffect(() => {
+    // Функция-обработчик события для закрытия меню при клике вне его области
+    const handleOutsideClick = (e: any) => {
+      const menuContainer = document.getElementById('dropdown-menu');
+  
+      // Проверка, был ли клик выполнен вне меню
+      if (menuContainer && !menuContainer.contains(e.target)) {
+        setisDropdown(false);
+      }
+    };
+  
+    // Добавление обработчика событий при монтировании компонента
+    document.addEventListener('mousedown', handleOutsideClick);
+  
+    // Удаление обработчика событий при размонтировании компонента
+    return () => {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
+  }, []);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -62,18 +81,6 @@ const Header = () => {
   ];
 
   const menuArray = [
-    // {
-    //   title: "Услуги",
-    //   OnClick: (e: any) => {
-    //     // e.preventDefault();
-    //     // if (pathname == "/") {
-    //     //   scrollToRef(aboutMeRef);
-    //     // } else {
-    //     //   router.push("/#aboutMe");
-    //     // }
-    //   },
-    // },
-
     {
       title: "Обо мне",
       OnClick: (e: any) => {
@@ -145,7 +152,7 @@ const Header = () => {
         >
           <div className="flex md:gap-x-[2.08vw] items-center">
             {/* dropdown menu */}
-            <div className={`relative `}>
+            <div id="dropdown-menu" className={`relative `}>
               <div
                 onClick={() => {
                   setisDropdown(!isDropdown);
@@ -245,11 +252,11 @@ const Header = () => {
             ))}
           </div>
           <div className="flex md:gap-x-[2.5vw] md:py-[2.59vh]">
-            <div className=" text-end">
+            <div className=" text-end select-text">
               <p className="md:pb-[1.11vh]">{contactEmail}</p>
               <p>{contactPhone}</p>
             </div>
-            <div className="flex md:gap-x-[0.41vw] items-center">
+            <div className="flex md:gap-x-[0.41vw] items-center ">
               {socialArray.map((item, index) => (
                 <Link
                   href={item.link}

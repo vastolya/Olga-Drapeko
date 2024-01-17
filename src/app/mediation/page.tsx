@@ -25,7 +25,7 @@ const mediation = () => {
             href="/"
             className="flex md:gap-[0.62vw] w-fit md:pt-[1.85vh] md:pb-[4.44vh]"
           >
-            <Image src={IconArrowLeft} alt={`IconArrowLeft`} width={24} />
+            <Image src={IconArrowLeft} alt={`IconArrowLeft`} width={24} className="md:h-[2.22vh] md:w-[1.25vw]"/>
             <p
               className={`${montserrat.className} md:text-[1.48vh] md:leading-[2.22vh] text-[#807D9B] font-semibold`}
             >

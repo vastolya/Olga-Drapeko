@@ -153,15 +153,15 @@ const FeedbackForm = () => {
         </div>
         {pathname == "/" ? (
           <div className="col-span-2 relative">
-            <div className="z-[22] absolute top-[-9.25vh]">
+            <div className="z-[22] absolute md:top-[-9.25vh]">
               <Image
                 src={PicFeedback}
                 alt="feedback full portrait"
-                width={600}
-                className="md:w-[20.72vw] md:h-[63.05vh] object-cover rounded-md"
+                width={1000}
+                className="md:w-[24.16] md:h-[63.05vh] object-cover rounded-md"
               />
             </div>
-            <div className="bg-[#D8CACF] absolute top-[-7.2vh] left-[1.04vw] md:w-[20.72vw] md:h-[63.05vh] rounded-md "></div>
+            <div className="bg-[#D8CACF] absolute top-[-7.2vh] left-[1vw] md:w-[23.66vw] md:h-[63.05vh] rounded-md "></div>
           </div>
         ) : (
           <div className="col-span-2 relative">

@@ -85,7 +85,7 @@ const Main = () => {
               <div
                 key={index}
                 onClick={() => handleItemClick(index)}
-                className={`border-[0.11vh] px-[0.83vw] py-[1.11vh] first:rounded-l-md last:rounded-r-md ${
+                className={`border-[0.11vh] px-[0.83vw] py-[1.11vh] first:rounded-l-md last:rounded-r-md  ${
                   selectedItem === index
                     ? "border-[#962C52]"
                     : "border-[#D3D3E3]"
@@ -126,7 +126,7 @@ const Main = () => {
             <Link
               key={index}
               href={item.link}
-              className={`group h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white hover:bg-[#962C52] hover:text-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
+              className={`group transition-all duration-300 h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white hover:bg-[#962C52] hover:text-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
             >
               <div className="w-full flex justify-between">
                 <p >{item.title}</p>
