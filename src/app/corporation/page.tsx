@@ -12,7 +12,7 @@ type FormInput = {
   phone: string;
 };
 
-const corporation = () => {
+const Corporation = () => {
   const [isModal, setIsModal] = useState(false);
   const {
     register,
@@ -173,4 +173,4 @@ const corporation = () => {
   );
 };
 
-export default corporation;
+export default Corporation;
