@@ -62,7 +62,7 @@ const Footer = () => {
     <footer className="border-t-[0.09vh] border-[#F0F0F5">
       <div className="md:mx-[12.5vw] md:mt-[2.22vh] md:mb-[4.44vh] text-[#1B1743] grid grid-cols-6 md:gap-x-[1.25vw]">
         <div className="col-span-2">
-          <div className="flex items-center md:pb-[2.59vh]">
+          <div className="flex items-center md:pb-[14.07vh]">
             <div>
               <p className="text-[#962C52] md:text-[1.11vh] md:leading-[1.38vh] ">
                 Юрист
@@ -72,10 +72,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="md:pb-[4.44vh] w-fit">
-            <Button title="Обратный звонок" />
-          </div>
-          <div className="md:pb-[4.44vh] w-fit">
+          <div className="md:pb-[2.59vh] w-fit">
             <Link href="/" className="cursor-pointer">
               <p
                 className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
@@ -107,22 +104,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className={`md:mt-[4.07vh] ${montserrat.className}`}>
-          <div className="grid md:gap-y-[0.74vh]">
-            {menuArray.map((item, index) => (
-              <div
-                key={index}
-                onClick={(e) => {
-                  item.OnClick(e);
-                }}
-                className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold w-fit cursor-pointer"
-              >
-                {item.title}
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={`col-span-2 ${montserrat.className}`}>
+        <div className={`col-span-2 col-start-5 ${montserrat.className}`}>
           <p className="md:text-[1.48vh] md:leading-[2.22vh] md:pb-[1.85vh] font-semibold">
             oa.drapeko@gmail.com
           </p>

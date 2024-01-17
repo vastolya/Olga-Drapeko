@@ -9,6 +9,7 @@ import { feedbackRef } from "./FeedbackForm";
 
 import { montserrat } from "../fonts";
 import PicMain from "../../../public/pics/picMain.jpg";
+import IconArrow from "../../../public/icons/iconArrowRight.svg";
 
 const Main = () => {
   const router = useRouter();
@@ -125,9 +126,12 @@ const Main = () => {
             <Link
               key={index}
               href={item.link}
-              className={`h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
+              className={`group h-fit flex items-center px-[1.25vw] py-[2.22vh] bg-white hover:bg-[#962C52] hover:text-white border-[1px] border-[#F0F0F5] font-bold md:text-[1.66vh] md:leading-[2.22vh] rounded-md ${montserrat.className}`}
             >
-              {item.title}
+              <div className="w-full flex justify-between">
+                <p >{item.title}</p>
+                <Image src={IconArrow} alt="arrow right" width={24} className="md:h-[2.22vh] md:w-[1.25vw] group-hover:visible invisible"/>
+              </div>
             </Link>
           ))}
         </div>

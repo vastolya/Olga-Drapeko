@@ -26,11 +26,11 @@ const corporation = () => {
             Выбрать услугу
           </h1>
           <div className="flex md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-            <p className="text-[#962C52] underline">Свяжитесь со мной</p>
+            <p className="text-[#962C52] underline cursor-pointer">Свяжитесь со мной</p>
             <p>, если у вас возникнут трудности при выборе</p>
           </div>
         </div>
-        <Link href="/outsourcing" className="col-span-3 shadow-md border-[0.09vh] rounded-md">
+        <Link href="/outsourcing" className="col-span-3 shadow-md border-[0.09vh] hover:border-[#962C52] rounded-md">
           <div className="md:py-[9.44vh] md:px-[1.25vw] text-center">
             <p className="md:pb-[1.11vh] md:text-[1.66vh] md:leading-[2.22vh] font-bold ">
               Юридическое сопровождение бизнеса
@@ -40,7 +40,7 @@ const corporation = () => {
             </p>
           </div>
         </Link>
-        <Link href="/mediation" className="col-span-3 shadow-md border-[0.09vh] rounded-md">
+        <Link href="/mediation" className="col-span-3 shadow-md border-[0.09vh] hover:border-[#962C52] rounded-md">
           <div className="md:py-[10.92vh] md:px-[1.25vw] text-center">
             <p className="md:text-[1.66vh] md:leading-[2.22vh] font-bold ">
             Разрешение споров и медиация

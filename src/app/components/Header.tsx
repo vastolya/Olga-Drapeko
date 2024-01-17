@@ -8,6 +8,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { montserrat } from "../fonts";
 import IconTelegram from "../../../public/icons/iconTelegram.svg";
 import IconWhatsapp from "../../../public/icons/iconWhatsapp.svg";
+import IconChevronDown from "../../../public/icons/iconChevronDown.svg";
+import IconChevronUp from "../../../public/icons/iconChevronUp.svg";
 import { feedbackRef } from "./FeedbackForm";
 import { aboutMeRef } from "./About";
 
@@ -17,6 +19,7 @@ const Header = () => {
   const contactPhone = "+7 923 341 32 66";
   const contactEmail = "oa.drapeko@gmail.com";
 
+  const [isDropdown, setisDropdown] = useState(false);
   const [isClick, setisClick] = useState(false);
   const [scrolling, setScrolling] = useState(true);
 
@@ -25,6 +28,7 @@ const Header = () => {
 
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+      setisDropdown(false);
 
       setScrolling(prevScrollPos > currentScrollPos || currentScrollPos < 10);
       prevScrollPos = currentScrollPos; // Обновляем prevScrollPos
@@ -58,17 +62,17 @@ const Header = () => {
   ];
 
   const menuArray = [
-    {
-      title: "Услуги",
-      OnClick: (e: any) => {
-        // e.preventDefault();
-        // if (pathname == "/") {
-        //   scrollToRef(aboutMeRef);
-        // } else {
-        //   router.push("/#aboutMe");
-        // }
-      },
-    },
+    // {
+    //   title: "Услуги",
+    //   OnClick: (e: any) => {
+    //     // e.preventDefault();
+    //     // if (pathname == "/") {
+    //     //   scrollToRef(aboutMeRef);
+    //     // } else {
+    //     //   router.push("/#aboutMe");
+    //     // }
+    //   },
+    // },
 
     {
       title: "Обо мне",
@@ -140,13 +144,101 @@ const Header = () => {
           className={`flex md:gap-x-[6.25vw]  ${montserrat.className} md:text-[1.48vh] md:leading-[2.22vh] font-semibold`}
         >
           <div className="flex md:gap-x-[2.08vw] items-center">
+            {/* dropdown menu */}
+            <div className={`relative `}>
+              <div
+                onClick={() => {
+                  setisDropdown(!isDropdown);
+                }}
+                className={`md:px-[0.62vw] md:py-[1.11vh] cursor-pointer flex gap-[0.62vw] rounded-md transition-all hover:bg-[#F8F6F7] ${
+                  isDropdown == false ? "" : " text-[#962C52]"
+                }`}
+              >
+                <p className={``}>Услуги</p>
+                {isDropdown == false ? (
+                  <Image
+                    src={IconChevronDown}
+                    alt="IconChevronDown"
+                    width={24}
+                    className="md:h-[2.22vh] md:w-[1.25vw] object-contain"
+                  />
+                ) : (
+                  <Image
+                    src={IconChevronUp}
+                    alt="IconChevronUp"
+                    width={24}
+                    className="md:h-[2.22vh] md:w-[1.25vw] object-contain"
+                  />
+                )}
+              </div>
+              <div
+                className={`flex flex-col gap-[1.85vh] md:px-[2.22vh] md:py-[1.25vw] absolute bg-white  border-[0.09vh] top-[8vh] border-[#F0F0F5] rounded-md shadow-md ${
+                  isDropdown == false ? "hidden" : "flex "
+                }`}
+              >
+                <div className="flex flex-col gap-[0.37vh]">
+                  <Link
+                    href="/corporation"
+                    onClick={() => setisDropdown(!isDropdown)}
+                    className="md:py-[1.11vh] md:px-[0.62vw] md:text-[1.48vh] md:leading-[2.22vh] hover:bg-[#F8F6F7] rounded-md text-[#962C52] font-semibold transition-all"
+                  >
+                    Юридическим&nbsp;лицам
+                  </Link>
+                  <div className="flex flex-col gap-[1.11vh] md:text-[1.48vh] md:leading-[2.22vh] text-[#1B1743] font-medium">
+                    <Link
+                      href="/outsourcing"
+                      onClick={() => setisDropdown(!isDropdown)}
+                      className="hover:text-[#B65D7D] transition-all"
+                    >
+                      Юридическое&nbsp;сопровождение&nbsp;бизнеса (аутсорсинг)
+                    </Link>
+                    <Link
+                      href="/mediation"
+                      onClick={() => setisDropdown(!isDropdown)}
+                      className="hover:text-[#B65D7D] transition-all"
+                    >
+                      Разрешение споров и медиация
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-[0.37vh]">
+                  <p className="md:py-[1.11vh] md:px-[0.62vw]  md:text-[1.48vh] md:leading-[2.22vh] text-[#962C52] font-semibold">
+                    Физические лица
+                  </p>
+                  <div className="flex flex-col gap-[1.11vh] md:text-[1.48vh] md:leading-[2.22vh] text-[#1B1743] font-medium">
+                    <Link
+                      href="/support"
+                      onClick={() => setisDropdown(!isDropdown)}
+                      className="hover:text-[#B65D7D] transition-all"
+                    >
+                      Разрешение споров и медиация
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-[0.37vh]">
+                  <p className="md:py-[1.11vh] md:px-[0.62vw]  md:text-[1.48vh] md:leading-[2.22vh] text-[#962C52] font-semibold">
+                    Банкротство
+                  </p>
+                  <div className="flex flex-col gap-[1.11vh] md:text-[1.48vh] md:leading-[2.22vh] text-[#1B1743] font-medium">
+                    <Link
+                      href="/bankruptcy"
+                      onClick={() => setisDropdown(!isDropdown)}
+                      className="hover:text-[#B65D7D] transition-all"
+                    >
+                      Юридическое сопровождение банкротства
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* dropdown menu */}
             {menuArray.map((item, index) => (
               <div
                 key={index}
                 onClick={(e) => {
                   item.OnClick(e);
                 }}
-                className={`md:px-[0.62vw] md:py-[1.11vh] cursor-pointer`}
+                className={`md:px-[0.62vw] md:py-[1.11vh] cursor-pointer rounded-md transition-all hover:bg-[#F8F6F7]`}
               >
                 {item.title}
               </div>

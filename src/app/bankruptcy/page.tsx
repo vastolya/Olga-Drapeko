@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import FeedbackForm from "../components/FeedbackForm";
@@ -8,6 +8,7 @@ import IconArrowLeft from "../../../public/icons/iconArrowLeft.svg";
 import PicBankruptcy from "../../../public/pics/picBankruptcy.svg";
 
 const bankruptcy = () => {
+  
   return (
     <main>
       <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] h-[10.74vh]"></div>

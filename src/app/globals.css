@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+.fixed-image {
+    position: fixed;
+    top: 0; /* Adjust as needed */
+    z-index: 1; /* Ensure it appears above other elements */
+  }
