@@ -74,12 +74,10 @@ const Header = () => {
   const toogleNavbar = (): void => {
     setisClick(!isClick);
   };
-
   const socialArray = [
     { src: IconTelegram, alt: "Telegram", link: "https://t.me/olga_drapeko" },
     { src: IconWhatsapp, alt: "Whatsapp", link: "https://wa.me/79233413266" },
   ];
-
   const menuArray = [
     {
       title: "Обо мне",
@@ -104,7 +102,6 @@ const Header = () => {
       },
     },
   ];
-
   const mainLogo = [
     {
       name: "Ольга Драпеко",
@@ -210,7 +207,7 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col gap-[0.37vh]">
                   <p className="md:py-[1.11vh] md:px-[0.62vw]  md:text-[1.48vh] md:leading-[2.22vh] text-[#962C52] font-semibold">
-                    Физические лица
+                    Физическим лицам
                   </p>
                   <div className="flex flex-col gap-[1.11vh] md:text-[1.48vh] md:leading-[2.22vh] text-[#1B1743] font-medium">
                     <Link
@@ -218,7 +215,7 @@ const Header = () => {
                       onClick={() => setisDropdown(!isDropdown)}
                       className="hover:text-[#B65D7D] transition-all"
                     >
-                      Разрешение споров и медиация
+                      Юридические услуги для частных лиц
                     </Link>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ export default function Home() {
       <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] h-[12.8vh]"></div>
       <Main />
       <About />
-      <Advantages />
+      {/* <Advantages /> */}
       <Clients />
       <FeedbackForm />
       <div className="md:h-[11.11vh] bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD]"></div>
