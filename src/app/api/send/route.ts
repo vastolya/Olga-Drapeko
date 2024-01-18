@@ -9,8 +9,8 @@ export async function POST(req: NextRequest) {
   const { name, phone } = await req.json();
   try {
     const data = await resend.emails.send({
-      from: 'olgadrapeko.ru',
-      to: 'izraolya@mail.ru',
+      from: `Ольга Драпеко <email@olgadrapeko.ru>`,
+      to: `izraolya@mail.ru`,
       subject: 'Someone just left their contact for a callback',
       text: '',
       react: EmailTemplate({ name, phone }),
