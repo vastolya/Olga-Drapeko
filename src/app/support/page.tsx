@@ -79,7 +79,7 @@ const support = () => {
               className={`md:pb-[1.85vh] ${evolventa.className} md:text-[3.33vh] md:leading-[3.51vh] font-bold `}
             >
               Досудебное
-              <br /> урегулирование спора
+              <br /> урегулирование споров
             </h1>
             <p className="md:pb-[5.55vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
               В некоторых случаях достичь компромисса в споре можно во
