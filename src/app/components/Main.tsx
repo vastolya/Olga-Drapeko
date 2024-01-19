@@ -28,7 +28,7 @@ const Main = () => {
     {
       title: "Юридические лица",
       description:
-        "Сопровождение сделок, помощь в урегулировании правовых конфликтов и разрешении других юридических задач",
+        "Сопровождение сделок, помощь в урегулировании правовых конфликтов и решении других юридических задач",
       services: [
         {
           title: "Юридическое сопровождение бизнеса (аутсорсинг)",
@@ -46,7 +46,7 @@ const Main = () => {
         "Консультации по правовым вопросам, сопровождение сделок, представление ваших интересов в суде",
       services: [
         {
-          title: "Разрешение споров и медиация",
+          title: "Юридические услуги для частных лиц",
           link: "/support",
         },
       ],
@@ -73,7 +73,7 @@ const Main = () => {
                 src={PicMain}
                 alt="main portrait"
                 width={600}
-                className="md:w-[20.72vw] md:h-[61.11vh] object-cover rounded-md"
+                className="md:w-[20.72vw] md:h-[61.11vh] object-cover rounded-md  transform scale-x-[-1]"
               />
             </div>
             <div className="bg-[#D8CACF] absolute top-[1.85vh] left-[1.04vw] md:w-[20.72vw] md:h-[61.11vh] rounded-md "></div>

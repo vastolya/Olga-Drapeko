@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FeedbackForm from "../components/FeedbackForm";
 
 import { montserrat } from "../fonts";
+import { evolventa } from "../fonts";
 import IconArrowLeft from "../../../public/icons/iconArrowLeft.svg";
 import PicBankruptcy from "../../../public/pics/picBankruptcy.svg";
 
 const bankruptcy = () => {
-  
   return (
     <main>
       <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] h-[10.74vh]"></div>
@@ -49,6 +49,11 @@ const bankruptcy = () => {
           </div>
         </div>
         <div className={`col-span-4 ${montserrat.className}`}>
+          <h1
+            className={`md:pb-[2.59vh] ${evolventa.className} md:text-[3.33vh] md:leading-[3.51vh] font-bold `}
+          >
+            Юридическая поддержка в ходе <br /> банкротных процедур
+          </h1>
           <p className="md:pb-[5.55vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
             Представляю интересы должников, кредиторов и других лиц
             <br /> по делам о банкротстве, а также осуществляю правовое
@@ -88,7 +93,7 @@ const bankruptcy = () => {
                 <br /> требований недобросовестных кредиторов
               </li>
               <li className="md:pb-[1.11vh] pl-[0.62vw]">
-                Участии в собрание кредиторов
+                Участие в собрание кредиторов
               </li>
               <li className="pl-[0.62vw]">
                 Противодействие недобросовестным должникам
@@ -96,13 +101,11 @@ const bankruptcy = () => {
             </ul>
           </div>
           <p className="md:pb-[4.44vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-            Консультирую руководителей и собственников бизнеса при банкротстве
-            компаний,
-            <br /> представляю интересы при оспаривании сделок, привлечении
-            бенефициаров
-            <br /> к субсидиарной ответственности и взыскании убытков, при
-            защите
-            <br /> от недобросовестных действий кредиторов и арбитражных
+            Консультирую руководителей и собственников бизнеса при банкротстве
+            компаний, представляю <br /> интересы при оспаривании сделок и
+            привлечении к субсидиарной ответственности, а также оказываю <br />{" "}
+            правовую поддержку при защите от недобросовестных действий
+            кредиторов и арбитражных <br />
             управляющих
           </p>
           <div

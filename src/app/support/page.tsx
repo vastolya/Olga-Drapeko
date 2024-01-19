@@ -16,8 +16,7 @@ const support = () => {
         <h1
           className={`md:mx-[12.5vw] md:py-[5.55vh] md:text-[7.4vh] md:leading-[7.4vh] font-bold text-[#1B1743]`}
         >
-          Разрешение споров
-          <br /> и медиация
+          Юридические услуги для <br /> частных лиц
         </h1>
       </div>
       <section className="md:mx-[12.5vw] grid grid-cols-6 md:gap-x-[1.25vw] text-[#1B1743]">
@@ -26,7 +25,12 @@ const support = () => {
             href="/"
             className="flex md:gap-[0.62vw] w-fit md:pt-[1.85vh] md:pb-[4.44vh]"
           >
-            <Image src={IconArrowLeft} alt={`IconArrowLeft`} width={24} className="md:h-[2.22vh] md:w-[1.25vw]"/>
+            <Image
+              src={IconArrowLeft}
+              alt={`IconArrowLeft`}
+              width={24}
+              className="md:h-[2.22vh] md:w-[1.25vw]"
+            />
             <p
               className={`${montserrat.className} md:text-[1.48vh] md:leading-[2.22vh] text-[#807D9B] font-semibold`}
             >
@@ -46,7 +50,14 @@ const support = () => {
         </div>
         <div className={`col-span-4 ${montserrat.className}`}>
           <div className="md:pb-[7.4vh]">
+            <h1
+              className={`md:pb-[1.85vh] ${evolventa.className} md:text-[3.33vh] md:leading-[3.51vh] font-bold `}
+            >
+              Услуги частным лицам
+            </h1>
             <p className="md:pb-[7.4vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
+              Консультирую по возникающим у клиентов юридическим вопросам.{" "}
+              <br /> <br />
               Представляю интересы доверителей в судах общей юрисдикции по
               гражданским
               <br /> делам и делам о привлечении к административной
@@ -54,7 +65,7 @@ const support = () => {
               <br />
               <br /> Имею опыт ведения дел, связанных с возмещением ущерба,
               спорами с<br /> кредитными организациями, страховыми, а также
-              представлению интересы
+              представляю интересы
               <br /> клиентов по делам, связанным с публичными отношениями, в
               частности по делам
               <br /> об оспаривании решений государственных органов.
@@ -68,13 +79,14 @@ const support = () => {
               className={`md:pb-[1.85vh] ${evolventa.className} md:text-[3.33vh] md:leading-[3.51vh] font-bold `}
             >
               Досудебное
-              <br /> урегулирования спора
+              <br /> урегулирование спора
             </h1>
             <p className="md:pb-[5.55vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-              В некоторых случаях, предусмотренных законом, соблюдение
-              претензионного
-              <br /> порядка является обязательным условием для дальнейшего
-              обращения в суд
+              В некоторых случаях достичь компромисса в споре можно во
+              внесудебном
+              <br /> порядке. Имею успешный опыт урегулирования споров и решения
+              юридических
+              <br /> вопросов во внесудебных процедурах.
             </p>
             <div className="md:pb-[4.44vh]">
               <p className="md:pb-[1.85vh] md:text-[1.66vh] md:leading-[2.22vh] font-bold">
@@ -112,24 +124,12 @@ const support = () => {
               className={`md:pb-[1.85vh] ${evolventa.className} md:text-[3.33vh] md:leading-[3.51vh] font-bold `}
             >
               Судебная защита
+              <br /> и представительство
             </h1>
             <p className="md:pb-[5.55vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-              Если досудебные меры не удается реализовать
-              <br /> и конфликт требует решения через суд
-            </p>
-            <p className="md:pb-[1.85vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-              В случае невозможности урегулировать спор в досудебном порядке
-              сторона
-              <br /> вправе в порядке, установленном законодательством
-              о гражданском
-              <br /> судопроизводстве, обратиться в суд за защитой нарушенных
-              либо оспариваемых
-              <br /> прав, свобод или законных интересов
-            </p>
-            <p className="md:pb-[4.44vh] md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-              Имею постоянный опыт представительства в судах по спорам,
-              <br />
-              вытекающим из различных областей права
+              Представляю интересы клиентов в судах и административных органах.
+              Имею <br /> постоянный опыт представительства по разным правовым
+              вопросам
             </p>
             <div className="md:pb-[4.44vh]">
               <p className="md:pb-[1.85vh] md:text-[1.66vh] md:leading-[2.22vh] font-bold">
@@ -143,15 +143,14 @@ const support = () => {
                   Сбор доказательств
                 </li>
                 <li className="md:pb-[1.11vh] md:pl-[0.62vw]">
-                  Подготовка иных необходимых процессуальных документов при
-                  рассмотрении
-                  <br /> дела в суде
+                  Подготовка иных необходимых процессуальных документов
+                  <br /> при рассмотрении дела в суде и иных органах
                 </li>
                 <li className="md:pb-[1.11vh] md:pl-[0.62vw]">
                   Выработка правовой позиции
                 </li>
                 <li className="md:pl-[0.62vw]">
-                  Представление интересов в судах
+                  Представление интересов в судах и иных органах
                 </li>
               </ul>
             </div>

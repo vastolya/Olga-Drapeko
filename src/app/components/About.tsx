@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { RefObject, createRef, useRef } from "react";
 import Image from "next/image";
 import PicAbout from "../../../public/pics/picAbout.jpg";
@@ -29,21 +29,28 @@ const About = () => {
             Обо мне
           </h1>
           <p className="md:pb-[4.44vh]">
-            Здравствуйте! Меня зовут
+            Меня зовут
             <span className="md:text-[1.66vh] font-bold"> Ольга Драпеко</span>
           </p>
 
-          <p className="md:text-[1.66vh] md:leading-[2.22vh] text-[#D8CACF] font-bold md:pb-[0.74vh]">
-            2014
+          <p className="md:text-[1.66vh] md:leading-[2.22vh]  font-bold md:pb-[0.74vh]">
+            Образование
           </p>
           <p className="md:pb-[4.44vh]">
-            Окончила ЮИ СФУ по специальности юриспруденция (бакалавриат)
+            В 2014 году окончила Юридический институт Сибирского <br />
+            Федерального Университета по специальности
+            <br /> юриспруденция. В 2016 году получила степень магистра
           </p>
-          <p className="md:text-[1.66vh] md:leading-[2.22vh] text-[#D8CACF] font-bold md:pb-[0.74vh]">
-            2016
+          <p className="md:text-[1.66vh] md:leading-[2.22vh]  font-bold md:pb-[0.74vh]">
+            Практика
           </p>
-          <p className="md:pb-[4.44vh]">Получила степень магистра</p>
-          <div>
+          <p className="md:pb-[4.44vh]">
+            Более 10 лет я занимаюсь юридической практикой и оказываю
+            <br /> правовую поддержу клиентам, представляю их интересы в<br />
+            судах и административных органах, сопровождаю сделки и<br />
+            консультирую по разным правовым вопросам
+          </p>
+          {/* <div>
             <p className="md:text-[1.66vh] md:leading-[2.22vh] text-[#D8CACF] font-bold md:pb-[1.85vh]">
               10 лет
             </p>
@@ -55,7 +62,7 @@ const About = () => {
               <li className="md:pb-[1.11vh] md:pl-[0.62vw]">Сопровождение сделок</li>
               <li className="md:pl-[0.62vw]">Консультирование по различным правовым вопросам</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="bg-[#D8CACF] absolute right-0 top-0 bottom-0 h-full w-[23.95vw]"></div>
