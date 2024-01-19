@@ -35,17 +35,6 @@ const Footer = () => {
         }
       },
     },
-    {
-      title: "Контакты",
-      OnClick: (e: any) => {
-        e.preventDefault();
-        if (pathname == "/") {
-          scrollToRef(feedbackRef);
-        } else {
-          router.push("/#feedback");
-        }
-      },
-    },
   ];
   const services = [
     { title: "Физические лица", link: "/support" },
@@ -58,8 +47,8 @@ const Footer = () => {
   ];
   return (
     <footer className="border-t-[0.09vh] border-[#F0F0F5] bg-white">
-      <div className="md:mx-[12.5vw] md:mt-[2.22vh] md:mb-[4.44vh] text-[#1B1743] grid grid-cols-6 md:gap-x-[1.25vw]">
-        <div className="col-span-2">
+      <div className="md:mx-[12.5vw] md:mt-[2.22vh] md:mb-[4.44vh] text-[#1B1743] grid grid-cols-3 md:grid-cols-6 md:gap-x-[1.25vw]">
+        <div className="hidden md:block md:col-span-2">
           <div className="flex items-center md:pb-[14.07vh]">
             <div>
               <p className="text-[#962C52] md:text-[1.11vh] md:leading-[1.38vh] ">
@@ -86,67 +75,103 @@ const Footer = () => {
             © 2024 Юридические услуги Ольга Драпеко
           </p>
         </div>
-        <div className={`col-span-1 ${montserrat.className}`}>
-          <p className="md:text-[1.48vh] md:leading-[2.22vh] md:pb-[1.85vh] font-medium text-[#962C52]">
+        <div
+          className={`mx-3 pt-6 md:pt-0 col-span-3 md:col-span-1 ${montserrat.className}`}
+        >
+          <p className="hidden md:block md:text-[1.48vh] md:leading-[2.22vh] md:pb-[1.85vh] font-medium text-[#962C52]">
             Услуги
           </p>
-          <div className="grid md:gap-y-[0.74vh]">
+          <div className="grid gap-y-2 md:gap-y-[0.74vh] pb-6 md:pb-0 ">
             {services.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
-                className="md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] md:leading-[2.22vh] font-semibold w-fit"
+                className="py-3 md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] text-base leading-6 md:leading-[2.22vh] font-semibold md:w-fit w-full text-center md:mx-0 bg-[#F8F6F7] md:bg-white rounded-md text-[#962C52] md:text-[#1B1743]"
               >
                 {item.title}
               </Link>
             ))}
           </div>
+          <div className="block md:hidden">
+            {menuArray.map((item, index) => (
+              <p
+                key={index}
+                onClick={(e) => {
+                  item.OnClick(e);
+                }}
+                className=" w-full text-center py-3 text-base leading-6 font-semibold pb-[60px]"
+              >
+                {item.title}
+              </p>
+            ))}
+          </div>
         </div>
-        <div className={`col-span-2 col-start-5 ${montserrat.className}`}>
-          <p className="md:text-[1.48vh] md:leading-[2.22vh] md:pb-[1.85vh] font-semibold select-text">
-            oa.drapeko@gmail.com
-          </p>
-          <p
-            className={`md:text-[3.33vh] md:leading-[3.51vh] md:pb-[1.85vh] font-bold ${evolventa.className} select-text`}
+        <div
+          className={`mx-3 md:mx-0 col-span-3 md:col-span-2 md:col-start-5 ${montserrat.className}`}
+        >
+          <div className="md:text-[1.48vh] text-base leading-6 md:leading-[2.22vh] pb-5 md:pb-[1.85vh] font-semibold select-text">
+            <a href="mailto:oa.drapeko@gmail.com">oa.drapeko@gmail.com</a>
+          </div>
+          <div
+            className={`md:text-[3.33vh] text-[24px] leading-[26px] md:leading-[3.51vh] pb-5 md:pb-[1.85vh] font-bold ${evolventa.className} select-text`}
           >
-            +7 923 341 32 66
-          </p>
-          <div className="flex md:gap-x-[0.41vw] items-center md:pb-[5.55vh]">
+            <a href="tel:+79233413266">+7 923 341 32 66</a>
+          </div>
+
+          <div className="flex gap-x-2 md:gap-x-[0.41vw] items-center pb-6 md:pb-[5.55vh]">
             {socialArray.map((item, index) => (
               <Link
                 href={item.link}
                 key={index}
-                className="bg-[#F8F6F7] h-fit rounded-md"
+                className="bg-[#F8F6F7] h-fit w-full md:w-fit rounded-md"
               >
                 <Image
                   src={item.src}
                   alt={item.alt}
                   width={24}
-                  className="mx-[0.62vw] my-[1.11vh] md:h-[2.22vh] md:w-[1.25vw] object-contain"
+                  className="mx-auto md:mx-[0.62vw] my-3 md:my-[1.11vh] md:h-[2.22vh] md:w-[1.25vw] object-contain"
                 />
               </Link>
             ))}
           </div>
-          <div className="flex md:gap-x-[12px]">
+          <div className="flex md:gap-x-[0.62vw] gap-x-3 items-start pb-[60px] md:pb-0">
             <Image
               src={IconPin}
               alt={`IconPin`}
               width={24}
               className="md:h-[2.22vh] md:w-[1.25vw] object-contain"
             />
-            <div className="">
-              <p className="md:pb-[1.11vh] md:text-[1.66vh] md:leading-[2.22vh] font-bold">
+            <div>
+              <p className="pb-2 md:pb-[1.11vh] text-[18px] md:text-[1.66vh] leading-6 md:leading-[2.22vh] font-bold">
                 г. Красноярск
               </p>
-              <p className="md:text-[1.48vh] md:leading-[2.22vh] font-medium">
+              <p className="text-base md:text-[1.48vh] leading-6 md:leading-[2.22vh] font-medium">
                 Работаю удаленно по всей России
               </p>
             </div>
           </div>
         </div>
+        <div className="block md:hidden col-span-3 mx-3 pb-6">
+          <p className=" text-xs leading-[14px] font-normal text-[#962C52]">
+            Юрист
+          </p>
+          <p className="text-[22px] leading-7 font-bold text-[#1B1743] pb-6">
+            Ольга Драпеко
+          </p>
+          <div
+            className={`pb-3 text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
+          >
+            <Link href="/privacy_policy">Политика конфиденциальности</Link>
+          </div>
+          <p
+            className={`text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
+          >
+            © 2024 Юридические услуги Ольга Драпеко
+          </p>
+        </div>
       </div>
       <div
-        className={`bg-[#F0F0F5] md:py-[2.22vh] flex justify-center md:gap-[1.25vw] md:text-[1.29vh] md:leading-[1.85vh] font-normal text-[#807D9B] ${montserrat.className}`}
+        className={`hidden bg-[#F0F0F5] md:py-[2.22vh] md:flex justify-center md:gap-[1.25vw] md:text-[1.29vh] md:leading-[1.85vh] font-normal text-[#807D9B] ${montserrat.className}`}
       >
         <Link href="/">Сайт создали</Link>
         <p>/</p>

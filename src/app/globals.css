@@ -7,3 +7,12 @@
     top: 0; /* Adjust as needed */
     z-index: 1; /* Ensure it appears above other elements */
   }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

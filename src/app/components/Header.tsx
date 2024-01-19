@@ -125,7 +125,7 @@ const Header = () => {
           : "-translate-y-full"
       }`}
     >
-      <header className={`flex justify-between  md:mx-[12.5vw] text-[#1B1743]`}>
+      <header className={`flex justify-between mx-4 md:mx-[12.5vw] my-[44px] md:my-0 text-[#1B1743]`}>
         <div className="flex items-center">
           {mainLogo.map((item, index) => (
             <div
@@ -135,17 +135,22 @@ const Header = () => {
               }}
               className=" cursor-pointer"
             >
-              <p className="text-[#962C52] md:text-[1.11vh] md:leading-[1.38vh] ">
+              <p className="text-[#962C52] text-xs leading-4 md:text-[1.11vh] md:leading-[1.38vh] ">
                 {item.job}
               </p>
-              <p className=" font-bold md:text-[2.03vh] md:leading-[2.59vh]">
+              <p className=" font-bold text-[22px] leading-7 md:text-[2.03vh] md:leading-[2.59vh]">
                 {item.name}
               </p>
             </div>
           ))}
         </div>
+        <div className="grid md:hidden gap-y-[9px] w-[48px] h-[48px] px-3 py-3 bg-[#F8F6F7] rounded-md">
+          <div className="w-full h-0 border-[1.5px] border-[#353433] rounded-full"></div>
+          <div className="w-full h-0 border-[1.5px] border-[#353433] rounded-full"></div>
+          <div className="w-[10px] h-0 border-[1.5px] border-[#353433] rounded-full"></div>
+        </div>
         <div
-          className={`flex md:gap-x-[6.25vw]  ${montserrat.className} md:text-[1.48vh] md:leading-[2.22vh] font-semibold`}
+          className={`hidden md:flex md:gap-x-[6.25vw]  ${montserrat.className} md:text-[1.48vh] md:leading-[2.22vh] font-semibold`}
         >
           <div className="flex md:gap-x-[2.08vw] items-center">
             {/* dropdown menu */}

@@ -119,7 +119,7 @@ const outsourcing = () => {
                       <Image
                         src={item.src}
                         alt={item.title}
-                        width={40}
+                        width={400}
                         className={`md:h-[3.70vh] md:w-[2.08vw] object-contain`}
                       />
                       <h1 className="md:text-[1.66vh] font-bold flex items-center">
