@@ -8,6 +8,7 @@ import { montserrat } from "../fonts";
 import IconArrowLeft from "../../../public/icons/iconArrowLeft.svg";
 import PicAdvantages from "../../../public/pics/picAdvantages.svg";
 import IconConvenience from "../../../public/icons/iconConvenience.svg";
+import IconExpert from "../../../public/icons/iconExpert.svg";
 import IconFlexability from "../../../public/icons/iconFlexability.svg";
 
 const advantagesArray = [
@@ -17,9 +18,9 @@ const advantagesArray = [
     text: "Сотрудничество без найма, отчетности, обязательных платежей и отчислений",
   },
   {
-    src: IconFlexability,
-    title: "Гибкость",
-    text: "Менее формализованный процесс без временных затрат на кадровую и административную работу",
+    src: IconExpert,
+    title: "Экспертный подход",
+    text: "Большой опыт работы юриста по спорам, вытекающим из различных областей права",
   },
   {
     src: IconFlexability,
