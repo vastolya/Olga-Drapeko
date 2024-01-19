@@ -137,7 +137,7 @@ const Main = () => {
                   src={IconArrow}
                   alt="arrow right"
                   width={24}
-                  className="md:h-[2.22vh] md:w-[1.25vw] group-hover:visible invisible"
+                  className="md:h-[2.22vh] md:w-[1.25vw] group-hover:visible invisible hidden md:flex"
                 />
               </div>
             </Link>

@@ -35,7 +35,7 @@ const Clients = () => {
                 src={item.src}
                 alt=""
                 width={300}
-                className="md:h-full min-h-[80px] min-w-[120px] object-contain grayscale"
+                className="md:h-full md:min-w-full min-h-[80px] min-w-[120px] object-contain grayscale"
               />
             </div>
           ))}
