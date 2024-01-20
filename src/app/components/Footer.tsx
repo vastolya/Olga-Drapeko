@@ -37,8 +37,8 @@ const Footer = () => {
     },
   ];
   const services = [
-    { title: "Физические лица", link: "/support" },
-    { title: "Юридические лица", link: "/corporation" },
+    { title: "Физическим лицам", link: "/support" },
+    { title: "Юридическим лицам", link: "/corporation" },
     { title: "Банкротство", link: "/bankruptcy" },
   ];
   const socialArray = [
@@ -86,7 +86,7 @@ const Footer = () => {
               <Link
                 key={index}
                 href={item.link}
-                className="py-3 md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] text-base leading-6 md:leading-[2.22vh] font-semibold md:w-fit w-full text-center md:mx-0 bg-[#F8F6F7] md:bg-white rounded-md text-[#962C52] md:text-[#1B1743]"
+                className="py-3 md:py-[1.11vh] md:px-[0.62vh] md:text-[1.48vh] text-base leading-6 md:leading-[2.22vh] font-semibold md:w-fit w-full text-center md:text-start whitespace-nowrap md:mx-0 bg-[#F8F6F7] md:bg-white rounded-md text-[#962C52] md:text-[#1B1743]"
               >
                 {item.title}
               </Link>

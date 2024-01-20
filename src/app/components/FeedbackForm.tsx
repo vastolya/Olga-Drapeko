@@ -156,7 +156,7 @@ const FeedbackForm = () => {
               <p className="pb-3 md:pb-[1.11vh] text-base md:text-[1.66vh] leading-[22px] md:leading-[2.22vh] font-bold">
                 г. Красноярск
               </p>
-              <p className="text-sm md:text-[1.48vh] leading-5 md:leading-[2.22vh] font-medium">
+              <p className="text-base md:text-[1.48vh] leading-5 md:leading-[2.22vh] font-medium">
                 Работаю удаленно по всей России
               </p>
             </div>
