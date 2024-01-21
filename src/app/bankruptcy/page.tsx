@@ -14,7 +14,7 @@ const bankruptcy = () => {
       <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] md:h-[10.74vh] h-[128px]"></div>
       <div className={` bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD]`}>
         <h1
-          className={`mx-4 py-6 md:mx-[12.5vw] md:py-[5.55vh] text-[32px] leading-[32px] md:text-[7.4vh] md:leading-[7.4vh] font-bold text-[#1B1743]`}
+          className={`mx-3 py-6 md:mx-[12.5vw] md:py-[5.55vh] text-[32px] leading-[32px] md:text-[7.4vh] md:leading-[7.4vh] font-bold text-[#1B1743]`}
         >
           Юридическое сопровождение банкротства
         </h1>

@@ -54,25 +54,12 @@ const About = () => {
           </p>
           <p className="md:pb-[4.44vh]">
             Более 10 лет я занимаюсь юридической практикой и оказываю
-            <br className="hidden md:block" /> правовую поддержу клиентам,
-            представляю их интересы в<br className="hidden md:block" />
-            судах и административных органах, сопровождаю сделки и
+            <br className="hidden md:block" /> правовую поддержку клиентам,
+            представляю их интересы в <br className="hidden md:block" />
+            судах и административных органах, сопровождаю сделки и 
             <br className="hidden md:block" />
             консультирую по разным правовым вопросам
           </p>
-          {/* <div>
-            <p className="md:text-[1.66vh] md:leading-[2.22vh] text-[#D8CACF] font-bold md:pb-[1.85vh]">
-              10 лет
-            </p>
-            <ul className="list-disc box-content md:ml-[1.04vw] marker:text-[#D8CACF]">
-              <li className="md:pb-[1.11vh] md:pl-[0.62vw]">
-                Представление интересов клиентов в арбитражных судах <br />и
-                судах общей юрисдикции
-              </li>
-              <li className="md:pb-[1.11vh] md:pl-[0.62vw]">Сопровождение сделок</li>
-              <li className="md:pl-[0.62vw]">Консультирование по различным правовым вопросам</li>
-            </ul>
-          </div> */}
         </div>
       </div>
       <div className="bg-[#D8CACF] hidden md:block absolute right-0 top-0 bottom-0 h-full w-[23.95vw]"></div>

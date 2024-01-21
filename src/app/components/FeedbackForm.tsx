@@ -87,7 +87,7 @@ const FeedbackForm = () => {
               type="text"
               placeholder="Ваше Имя"
               required
-              className="px-5 py-3 text-sm leading-5 md:px-[1.04vw] md:py-[1.11vh] rounded-md text-[#1B1743] text-[1.48vh] placeholder:text-[1.48vh] placeholder:leading-[2.22vh] placeholder:font-medium placeholder:text-[#D3D3E3]"
+              className="px-5 py-3 text-sm leading-5 md:px-[1.04vw] md:py-[1.11vh] rounded-md text-[#1B1743] text-[1.48vh] md:placeholder:text-[1.48vh] placeholder:leading-[2.22vh] placeholder:font-medium placeholder:text-[#D3D3E3]"
               {...register("name")}
             />
           </div>
@@ -103,7 +103,7 @@ const FeedbackForm = () => {
               type="text"
               placeholder="+7 999 999 99 99"
               required
-              className="px-5 py-3 text-sm leading-5 md:px-[1.04vw] md:py-[1.11vh] rounded-md text-[#1B1743] text-[1.48vh] placeholder:text-[1.48vh] placeholder:leading-[2.22vh] placeholder:font-medium placeholder:text-[#D3D3E3]"
+              className="px-5 py-3 text-sm leading-5 md:px-[1.04vw] md:py-[1.11vh] rounded-md text-[#1B1743] text-[1.48vh] md:placeholder:text-[1.48vh] placeholder:leading-[2.22vh] placeholder:font-medium placeholder:text-[#D3D3E3]"
               {...register("phone")}
             />
           </div>
@@ -115,7 +115,7 @@ const FeedbackForm = () => {
           </button>
         </form>
         <div
-          className={`px-3 md:px-0 pt-[48px] md:pt-0 pb-[60px] md:pb-0 col-span-3 md:col-span-2 ${
+          className={`hidden md:block px-3 md:px-0 pt-[48px] md:pt-0 pb-[60px] md:pb-0 col-span-3 md:col-span-2 ${
             montserrat.className
           } ${"bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] md:from-transparent md:to-transparent lg:from-transparent lg:to-transparent"}`}
         >

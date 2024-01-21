@@ -8,8 +8,8 @@ import PicNotFound from "../../public/pics/picNotFound.svg";
 const notFound = () => {
   return (
     <main className={`${montserrat.className}`}>
-      <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] h-[10.74vh]"></div>
-      <div className="md:my-[6.2vh] flex justify-center">
+  <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] md:h-[10.74vh] h-[128px]"></div>
+      <div className="my-6 md:my-[6.2vh] flex justify-center">
         <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] w-fit py-[11.11vh] px-[6.25vw] text-center rounded-[46.29vh] shadow-md">
           <div className="md:pb-[1.85vh] flex justify-center">
             <Image
