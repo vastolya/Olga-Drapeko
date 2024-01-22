@@ -60,11 +60,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:pb-[2.59vh] w-fit">
-            <Link href="/" className="cursor-pointer">
+            <Link href="/privacy_policy" className="cursor-pointer">
               <p
                 className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
               >
-                Политика конфиденциальности
+                  Политика конфиденциальности
               </p>
             </Link>
           </div>

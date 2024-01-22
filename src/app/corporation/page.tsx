@@ -102,6 +102,16 @@ const Corporation = () => {
                     {...register("phone")}
                   />
                 </div>
+                <p className="text-xs leading-5 font-medium pb-3 md:pb-[1.11vh] md:text-[1.29vh] md:leading-[1.85vh] md:font-normal">
+                  Нажимая кнопку «Отправить», я даю своё согласие на{" "}
+                  <span>
+                    {" "}
+                    <Link href="/privacy_policy" className=" underline">
+                      обработку персональных
+                    </Link>
+                  </span>{" "}
+                  &nbsp;данных
+                </p>
                 <button
                   disabled={isSubmitting}
                   className="py-3 px-6 text-base leading-6 bg-white text-[#1B1743] md:py-[1.48vh] md:px-[1.25vw] rounded-md md:text-[1.48vh] md:leading-[2.22vh] font-semibold hover:shadow-md active:scale-[97%] transition-all"
@@ -136,14 +146,24 @@ const Corporation = () => {
             Выбрать услугу
           </h1>
           <div className="flex pb-10 md:pb-0 md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-            <p className={`text-sm leading-5`}><span className="text-[#962C52]"  onClick={() => setIsModal(!isModal)}>Свяжитесь со мной</span>, если у вас возникнут трудности при выборе</p>
+            <p className={`text-sm leading-5 block md:hidden`}>
+              <span
+                className="text-[#962C52]"
+                onClick={() => setIsModal(!isModal)}
+              >
+                Свяжитесь со мной
+              </span>
+              , если у вас возникнут трудности при выборе
+            </p>
             <p
               className="hidden md:block text-[#962C52] underline cursor-pointer"
               onClick={() => setIsModal(!isModal)}
             >
               Свяжитесь со мной
             </p>
-            <p className="hidden md:block ">, если у вас возникнут трудности при выборе</p>
+            <p className="hidden md:block ">
+              , если у вас возникнут трудности при выборе
+            </p>
           </div>
         </div>
         <Link

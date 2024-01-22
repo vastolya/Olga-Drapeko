@@ -107,6 +107,9 @@ const FeedbackForm = () => {
               {...register("phone")}
             />
           </div>
+          <p className="text-xs leading-5 font-medium pb-3 md:pb-[1.11vh] md:text-[1.29vh] md:leading-[1.85vh] md:font-normal">
+            Нажимая кнопку «Отправить», я даю своё согласие на <span> <Link href="/privacy_policy" className=" underline">обработку персональных</Link></span> &nbsp;данных
+          </p>
           <button
             disabled={isSubmitting}
             className="bg-white text-[#1B1743] md:py-[1.48vh] py-4 md:px-[1.25vw] px-6 rounded-md md:text-[1.48vh] text-base leading-6 md:leading-[2.22vh] font-semibold hover:shadow-md active:scale-[97%] transition-all"
