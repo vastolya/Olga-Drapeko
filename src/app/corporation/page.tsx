@@ -145,25 +145,17 @@ const Corporation = () => {
           >
             Выбрать услугу
           </h1>
-          <div className="flex pb-10 md:pb-0 md:text-[1.48vh] md:leading-[2.22vh] font-medium">
-            <p className={`text-sm leading-5 block md:hidden`}>
+          <div className="flex pb-10 md:pb-0 ">
+            <p className={`md:text-[1.48vh] md:leading-[2.22vh] font-medium text-sm leading-5`}>
               <span
-                className="text-[#962C52]"
+                className="text-[#962C52] underline cursor-pointer"
                 onClick={() => setIsModal(!isModal)}
               >
                 Свяжитесь со мной
               </span>
               , если у вас возникнут трудности при выборе
             </p>
-            <p
-              className="hidden md:block text-[#962C52] underline cursor-pointer"
-              onClick={() => setIsModal(!isModal)}
-            >
-              Свяжитесь со мной
-            </p>
-            <p className="hidden md:block ">
-              , если у вас возникнут трудности при выборе
-            </p>
+
           </div>
         </div>
         <Link

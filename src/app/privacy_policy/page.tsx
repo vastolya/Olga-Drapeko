@@ -8,16 +8,16 @@ const privacy_policy = () => {
     <div className="">
       <div className="bg-gradient-to-r from-[#EBECF1] to-[#FCFCFD] md:h-[10.74vh] h-[128px]"></div>
       <div
-        className={`md:my-[5.55vh] md:mx-[12.5vw] flex flex-col md:gap-y-[4.44vh] ${montserrat.className} md:text-[1.48vh] leading-[2.22vh] font-medium text-[#1B1743]`}
+        className={`mx-4 py-6 md:my-[5.55vh] md:mx-[12.5vw] flex flex-col md:gap-y-[4.44vh] ${montserrat.className} gap-y-[40px] text-sm leading-5 md:text-[1.48vh] md:leading-[2.22vh] font-medium text-[#1B1743]`}
       >
         <div>
           <h1
-            className={`md:pb-[1.48vh] md:text-[3.33vh] md:leading-[3.51vh] font-bold ${evolventa.className}`}
+            className={`pb-2 text-2xl leading-[26px] md:pb-[1.48vh] md:text-[3.33vh] md:leading-[3.51vh] font-bold ${evolventa.className}`}
           >
-            Настоящая политика обработки персональных данных
+            Политика обработки персональных данных
           </h1>
-          <p className="md:pb-[2.22vh]">
-            Составлена в соответствии с требованиями Федерального закона от
+          <p className="pb-4 md:pb-[2.22vh]">
+          Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от
             27.07.2006 № 152-ФЗ «О персональных данных» и описывает, как мы
             обрабатываем и обеспечиваем безопасность персональных данных
           </p>
@@ -30,7 +30,7 @@ const privacy_policy = () => {
           </p>
         </div>
         <div>
-          <p className="md:pb-[1.11vh] md:text-[1.66vh] font-bold">
+          <p className="text-base leading-[22px] pb-4 md:pb-[1.11vh] md:text-[1.66vh] font-bold">
             Сбор и использование информации
           </p>
           <p>
@@ -47,7 +47,7 @@ const privacy_policy = () => {
           </p>
         </div>
         <div>
-          <p className="md:pb-[1.11vh] md:text-[1.66vh] font-bold">
+          <p className="text-base leading-[22px] pb-4 md:pb-[1.11vh] md:text-[1.66vh] font-bold">
             Порядок обработки персональных данных
           </p>
           <p>
@@ -70,7 +70,7 @@ const privacy_policy = () => {
           </p>
         </div>
         <div>
-          <p className="md:pb-[1.11vh] md:text-[1.66vh] font-bold">
+          <p className="text-base leading-[22px] pb-4 md:pb-[1.11vh] md:text-[1.66vh] font-bold">
             Куки и аналитика
           </p>
           <p>
@@ -82,7 +82,7 @@ const privacy_policy = () => {
           </p>
         </div>
         <div>
-          <p className="md:pb-[1.11vh] md:text-[1.66vh] font-bold">
+          <p className="text-base leading-[22px] pb-4 md:pb-[1.11vh] md:text-[1.66vh] font-bold">
             Изменения в Политике
           </p>
           <p>
@@ -92,11 +92,11 @@ const privacy_policy = () => {
           </p>
         </div>
         <div>
-          <p className="md:pb-[1.11vh] md:text-[1.66vh] font-bold">
+          <p className="text-base leading-[22px] pb-4 md:pb-[1.11vh] md:text-[1.66vh] font-bold">
             Контактная информация
           </p>
-          <p className="md:pb-[1.11vh]">
-            Если у вас есть вопросы или замечания относительно Политики, <br />
+          <p className="pb-4 md:pb-[1.11vh]">
+            Если у вас есть вопросы или замечания относительно Политики, <br className="hidden md:block"/>
             свяжитесь с нами по следующей контактной информации:
           </p>
           <p>
@@ -105,7 +105,7 @@ const privacy_policy = () => {
           </p>
         </div>
         <div>
-          <p className="md:pb-[1.11vh] md:text-[1.66vh] font-bold">
+          <p className="text-base leading-[22px] pb-4 md:pb-[1.11vh] md:text-[1.66vh] font-bold">
             Заключительные положения:
           </p>
           <p>
