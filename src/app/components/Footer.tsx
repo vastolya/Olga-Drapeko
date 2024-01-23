@@ -173,7 +173,7 @@ const Footer = () => {
       <div
         className={`hidden bg-[#F0F0F5] md:py-[2.22vh] md:flex justify-center md:gap-[1.25vw] md:text-[1.29vh] md:leading-[1.85vh] font-normal text-[#807D9B] ${montserrat.className}`}
       >
-        <Link href="/">Сайт создали</Link>
+        <Link href="https://qualitywebsites.notion.site/9899e34041594f8484214ce6f6edd259" target="_blank">Сайт создали</Link>
         <p>/</p>
         <Link href="/photo_contributor">Автор фотоматериала</Link>
       </div>
