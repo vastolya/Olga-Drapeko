@@ -72,6 +72,11 @@ const Footer = () => {
           <p
             className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
           >
+            ИНН 245211480910
+          </p>
+          <p
+            className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
+          >
             © 2024 Юридические услуги Ольга Драпеко
           </p>
         </div>
@@ -163,6 +168,11 @@ const Footer = () => {
           >
             <Link href="/privacy_policy">Политика конфиденциальности</Link>
           </div>
+          <p
+            className={`text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
+          >
+            ИНН 245211480910
+          </p>
           <p
             className={`text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
           >
