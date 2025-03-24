@@ -20,6 +20,8 @@ const scrollToRef = (ref: any) => {
   }
 };
 
+const year = new Date().getFullYear();
+
 const Footer = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -64,10 +66,16 @@ const Footer = () => {
               <p
                 className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
               >
-                  Политика конфиденциальности
+                Политика конфиденциальности
               </p>
             </Link>
           </div>
+
+          <p
+            className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
+          >
+            ИП Драпеко Ольга Андреевна
+          </p>
 
           <p
             className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
@@ -77,7 +85,7 @@ const Footer = () => {
           <p
             className={`md:text-[1.48vh] md:leading-[2.22vh] ${montserrat.className} font-medium text-[#807D9B]`}
           >
-            © 2024 Юридические услуги Ольга Драпеко
+            © {year} Юридические услуги Ольга Драпеко
           </p>
         </div>
         <div
@@ -176,14 +184,19 @@ const Footer = () => {
           <p
             className={`text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
           >
-            © 2024 Юридические услуги Ольга Драпеко
+            © {year} Юридические услуги Ольга Драпеко
           </p>
         </div>
       </div>
       <div
         className={`hidden bg-[#F0F0F5] md:py-[2.22vh] md:flex justify-center md:gap-[1.25vw] md:text-[1.29vh] md:leading-[1.85vh] font-normal text-[#807D9B] ${montserrat.className}`}
       >
-        <Link href="https://qualitywebsites.notion.site/9899e34041594f8484214ce6f6edd259" target="_blank">Сайт создали</Link>
+        <Link
+          href="https://qualitywebsites.notion.site/9899e34041594f8484214ce6f6edd259"
+          target="_blank"
+        >
+          Сайт создали
+        </Link>
         <p>/</p>
         <Link href="/photo_contributor">Автор фотоматериала</Link>
       </div>
