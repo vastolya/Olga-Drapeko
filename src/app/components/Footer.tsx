@@ -179,6 +179,11 @@ const Footer = () => {
           <p
             className={`text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
           >
+            ИП Драпеко Ольга Андреевна
+          </p>
+          <p
+            className={`text-xs leading-5 text-[#807D9B] font-medium ${montserrat.className}`}
+          >
             ИНН 245211480910
           </p>
           <p
