@@ -6,7 +6,7 @@ import PicAbout from "../../../public/pics/picAbout.jpg";
 import { montserrat } from "../fonts";
 import { evolventa } from "../fonts";
 
-export const aboutMeRef: RefObject<HTMLDivElement> = createRef();
+export const aboutMeRef: RefObject<HTMLDivElement | null> = createRef();
 
 const About = () => {
   return (

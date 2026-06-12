@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
       to: `izraolya@mail.ru`,
       subject: 'Someone just left their contact for a callback',
       text: '',
-      react: EmailTemplate({ name, phone }),
+      react: <EmailTemplate name={name} phone={phone} />,
     });
 
     return Response.json(data);

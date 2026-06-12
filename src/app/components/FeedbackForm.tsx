@@ -16,7 +16,7 @@ import PicFeedback from "../../../public/pics/picFeedback.jpg";
 import PicFeedbackClean from "../../../public/pics/picFeedbackClean.png";
 import Link from "next/link";
 
-export const feedbackRef: RefObject<HTMLDivElement> = createRef();
+export const feedbackRef: RefObject<HTMLDivElement | null> = createRef();
 
 const socialArray = [
   { src: IconTelegram, alt: "Telegram", link: "https://t.me/olga_drapeko" },

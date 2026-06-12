@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -121,7 +123,7 @@ const bankruptcy = () => {
           >
             <div className="md:pb-[1.11vh] flex items-center text-[#962C52]">
               <p className="md:text-[1.66vh] md:leading-[2.22vh] font-bold">
-                от 20 000 ₽&nbsp;
+                от 30 000 ₽&nbsp;
               </p>
               <p className="md:text-[1.29vh] md:leading-[1.85vh] font-normal">
                 / в месяц
@@ -139,7 +141,7 @@ const bankruptcy = () => {
         <div className="py-4 px-4">
           <div className=" flex items-center text-[#962C52] pb-2">
             <p className="text-base leading-[22px] font-bold">
-              от 20 000 ₽&nbsp;
+              от 30 000 ₽&nbsp;
             </p>
             <p className=" text-xs leading-5 font-normal">/ в месяц</p>
           </div>

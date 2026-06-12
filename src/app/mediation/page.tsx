@@ -93,7 +93,7 @@ const mediation = () => {
             >
               <div className="pb-2 md:pb-[1.11vh] flex items-center text-[#962C52]">
                 <p className="text-base leading-[22px] md:text-[1.66vh] md:leading-[2.22vh] font-bold">
-                  от 10 000 ₽
+                  от 12 000 ₽
                 </p>
               </div>
               <p className="text-sm leading-5 md:text-[1.29vh] md:leading-[1.85vh] font-medium md:font-normal">
@@ -170,7 +170,7 @@ const mediation = () => {
             >
               <div className="pb-2 md:pb-[1.11vh] flex items-center text-[#962C52]">
                 <p className="text-base leading-[22px] md:text-[1.66vh] md:leading-[2.22vh] font-bold">
-                  от 20 000 ₽
+                  от 16 000 ₽
                 </p>
               </div>
               <p className="text-sm leading-5 md:text-[1.29vh] md:leading-[1.85vh] font-medium md:font-normal">
