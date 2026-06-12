@@ -155,7 +155,7 @@ const FeedbackForm = () => {
               width={24}
               className="md:h-[2.22vh] md:w-[1.25vw] object-contain"
             />
-            <div className="">
+            <div className="">  
               <p className="pb-3 md:pb-[1.11vh] text-base md:text-[1.66vh] leading-[22px] md:leading-[2.22vh] font-bold">
                 г. Красноярск
               </p>
@@ -172,7 +172,7 @@ const FeedbackForm = () => {
                 src={PicFeedback}
                 alt="feedback full portrait"
                 width={1000}
-                className="md:w-[24.16] md:h-[63.05vh] object-cover rounded-md"
+                className="md:w-[24.16wh] md:h-[63.05vh] object-cover rounded-md"
               />
             </div>
             <div className="bg-[#D8CACF] absolute top-[-7.2vh] left-[1vw] md:w-[23.66vw] md:h-[63.05vh] rounded-md "></div>
